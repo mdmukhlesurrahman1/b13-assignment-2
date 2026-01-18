@@ -4,11 +4,10 @@
 *{
   margin: 0;
   padding: 0;
+  font-family: "Inter", sans-serif;
 }
 
 body{
-  font-family: "Inter", sans-serif;
-  font-size: 16px;
   justify-items: center;
 }
 
@@ -66,7 +65,81 @@ nav ul a:hover{
   display: none;
 }
 
+/* Banner Section */
 
+.banner{
+  background-image: url(assets/hero-bg.png);
+  background-size:cover;
+  background-position:center;
+  max-width: 1600px;
+  justify-items: center;
+  padding: 101px;
+}
+
+.banner-head{
+  width: 350px;
+  height: 350px;
+  background-image: url(assets/hero-circle.png);
+  background-size: cover;
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.badge{
+  position: absolute;
+  top: 12px;
+  right: 23px;
+  padding: 8px 16px;
+  background-color: #00FF88;
+  border-radius: 1000px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.banner-body{
+  justify-items: center;
+}
+.banner-body h1{
+  font-weight: 1000;
+  color: white;
+  font-size: 3.75rem;
+  margin-bottom: 8px;
+}
+
+.banner-body p{
+  color: white;
+  font-size: 1rem;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.banner-btn{
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.banner-btn .btn1{
+  gap: 8px;
+  padding: 12px 20px;
+}
+
+.banner-btn .btn2{
+  display: flex;
+  align-items: center;
+  text-align: center;
+  padding: 12px 20px;
+  border-radius: 1000px;
+  border: 1px solid #00FF88;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #00FF88;
+  gap: 8px;
+  background-color: transparent;
+}
 /* Mobile View */
 
 @media screen and (max-width: 576px) {
@@ -83,7 +156,65 @@ nav ul a:hover{
   }
 
   #hamburger-menu{
-  display:flex;
+  display:inline;
+  }
+  .banner{
+    padding: 40px 20px;
   }
 
+  .banner-head{
+    height: 200px;
+    width: 200px;
+    margin-bottom: 24px;
+  }
+
+  .banner-head img{
+    height: 80px;
+  }
+
+  .badge{
+  top: 4px;
+  right: 0;
+  font-size: 16px;
+  }
+
+  .banner-body h1{
+    font-size: 2.5rem;
+  }
+  }
+  /* Tab View */
+
+@media screen and (min-width: 576px) and (max-width: 992px) {
+
+  nav{
+  padding: 16px 20px;
+  }
+
+  #logo{
+    height: 20px;
+  }
+
+  .banner{
+    padding: 50px 20px;
+  }
+
+  .banner-head{
+    height: 300px;
+    width: 300px;
+    margin-bottom: 20px;
+  }
+
+  .banner-head img{
+    height: 120px;
+  }
+
+  .badge{
+  top: 10px;
+  right: 10px;
+  font-size: 16px;
+  }
+
+  .banner-body h1{
+    font-size: 3rem;
+  }
   }
