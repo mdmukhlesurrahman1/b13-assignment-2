@@ -312,7 +312,102 @@ nav ul a:hover{
     font-size: 1rem;
     font-weight: 600;
    }
-   
+
+   .host{
+    background-color: #1A0B2E;
+    padding: 0 200px 120px 200px;
+    justify-items: center;
+    max-width: 1600px;
+   }
+
+   .host-title{
+    color: white;
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 40px;
+   }
+
+  .host-container{
+    padding: 40px;
+    border-radius: 40px;
+    background-color: rgba(53, 17, 101, 0.4);
+    display: flex;
+    align-items: center;
+    gap: 24px;
+  }
+
+  .host-dtails h2{
+    color: white;
+    margin-bottom: 16px;
+    font-weight: 700;
+    font-size: 2rem;
+  }
+
+  .host-dtails p{
+    color: white;
+    opacity: 60%;
+    line-height: 24pt;
+    font-size: 1rem;
+    margin-bottom: 16px;
+  }
+
+  .social{
+    display: flex;
+    gap: 8px;
+  }
+
+  .circle{
+    height: 40px;
+    width: 40px;
+    border: 1px solid #533C72;
+    border-radius: 50%;
+    text-align: center;
+    align-content: center;
+  }
+
+  .circle:hover{
+    cursor: pointer;
+    border: 1px solid #FB09B4 ;
+  }
+
+  footer{
+    background-image: url(assets/footer-bg.png);
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    max-width: 1600px;
+    padding: 120px;
+    color: white;
+    text-align: center;
+  }
+
+  .links{
+    margin: 32px auto;
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    align-content: center;
+  }
+  .link{
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    font-size: 1rem;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.6);
+  }
+  .link:hover{
+    color: white;
+  }
+  .links a {
+    text-decoration: none;
+    color: white;
+  }
+  .copyright{
+    font-size: 1rem;
+    opacity: 60%;
+
+  }
 /* Mobile View */
 
 @media screen and (max-width: 576px) {
