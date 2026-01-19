@@ -241,7 +241,7 @@ nav ul a:hover{
     border-radius: 40px;
     background-color: rgba(53, 17, 101, 0.4);
     text-align: left;
-    align-items: center;
+    align-content: center;
    }
    .cards img{
     height: 60px;
@@ -260,6 +260,59 @@ nav ul a:hover{
     line-height: 24pt;
   }
 
+  /* Feature Section */
+
+  .feature{
+    background-color: #1A0B2E;
+    width: 100%;
+    max-width: 1600px;
+    padding: 120px 200px;
+    justify-items: center;
+  }
+
+  .feature .title{
+    color: white;
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 40px;
+  }
+
+  .feature-container{
+    display: flex;
+    gap: 30px;
+  }
+
+  .feature-items{
+    background-color: #250D44;
+    border-radius: 24px;
+  }
+
+   .feature-items .info{
+    padding: 24px;
+   }
+
+   .items-title{
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+   }
+
+   .info p{
+    color: white;
+    opacity: 60%;
+    margin-bottom: 12px;
+   }
+
+   .info span{
+    display: flex;
+    gap: 6px;
+    align-items: center;
+    color: #00FF88;
+    font-size: 1rem;
+    font-weight: 600;
+   }
+   
 /* Mobile View */
 
 @media screen and (max-width: 576px) {
