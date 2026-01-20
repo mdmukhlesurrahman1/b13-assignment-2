@@ -5,6 +5,7 @@
   margin: 0;
   padding: 0;
   font-family: "Inter", sans-serif;
+  color: white;
   box-sizing: border-box;
 }
 
@@ -22,7 +23,6 @@ body{
   border: none;
   font-size: 1rem;
   font-weight: 600;
-  color: white;
   background-image: linear-gradient(45deg, #F7E93F, #FB09B4, #9100F8);
 }
 
@@ -90,6 +90,7 @@ nav ul a:hover{
 }
 
 .badge{
+  color: #1A0B2E;
   position: absolute;
   top: 12px;
   right: 23px;
@@ -126,24 +127,48 @@ nav ul a:hover{
 .banner-btn .btn1{
   gap: 8px;
   padding: 12px 20px;
-  animation: myAnimation 2s infinite;
-  transition: 0.5s ease;
 }
 
-.banner-btn .btn2{
+.btn2{
   display: flex;
   align-items: center;
   text-align: center;
   padding: 12px 20px;
   border-radius: 1000px;
-  border: 1px solid #00FF88;
+  border: 2px solid #00FF88;
   font-size: 1rem;
   font-weight: 600;
   color: #00FF88;
   gap: 8px;
   background-color: transparent;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
 }
 
+.btn2::before{
+  content:'';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: #00FF88;
+  transition: 0.5s;
+  z-index: -1;
+}
+
+.btn2:hover::before, .btn2:active::before{
+  width: 100%;
+}
+
+.btn2:hover{
+  color: #1A0B2E;
+  cursor: pointer;
+}
+.btn2:hover img{
+  background: url();
+}
 /* About Section */
 
   .about{
@@ -155,14 +180,12 @@ nav ul a:hover{
   }
 
   .about .head{
-    color: white;
     font-size: 3rem;
     font-weight: 700;
     margin-bottom: 16px;
   }
 
   .about .details{
-    color: white;
     opacity: 80%;
     font-size: 1rem;
     line-height: 20pt;
@@ -189,7 +212,6 @@ nav ul a:hover{
   }
 
   .items p{
-    color: white;
     font-size: 1rem;
     opacity: 80%;
   }
@@ -204,7 +226,6 @@ nav ul a:hover{
   }
 
    .why-choose .head{
-    color: white;
     font-size: 3rem;
     font-weight: 700;
     margin-bottom: 40px;
@@ -250,14 +271,12 @@ nav ul a:hover{
 
     .cards h2{
     margin: 16px 0;
-    color: white;
     font-size: 1.5rem;
     font-weight: 700;
     }
 
   .cards p{
     font-size: 1rem;
-    color: white;
     line-height: 24pt;
   }
 
@@ -272,7 +291,6 @@ nav ul a:hover{
   }
 
   .feature .title{
-    color: white;
     font-size: 3rem;
     font-weight: 700;
     margin-bottom: 40px;
@@ -286,6 +304,7 @@ nav ul a:hover{
   .feature-items{
     background-color: #250D44;
     border-radius: 24px;
+    overflow: hidden;
   }
 
    .feature-items .info{
@@ -293,14 +312,12 @@ nav ul a:hover{
    }
 
    .items-title{
-    color: white;
     font-size: 1.5rem;
     font-weight: 700;
     margin-bottom: 12px;
    }
 
    .info p{
-    color: white;
     opacity: 60%;
     margin-bottom: 12px;
    }
@@ -322,7 +339,6 @@ nav ul a:hover{
    }
 
    .host-title{
-    color: white;
     font-size: 3rem;
     font-weight: 700;
     margin-bottom: 40px;
@@ -338,14 +354,12 @@ nav ul a:hover{
   }
 
   .host-dtails h2{
-    color: white;
     margin-bottom: 16px;
     font-weight: 700;
     font-size: 2rem;
   }
 
   .host-dtails p{
-    color: white;
     opacity: 60%;
     line-height: 24pt;
     font-size: 1rem;
@@ -378,7 +392,6 @@ nav ul a:hover{
     width: 100%;
     max-width: 1600px;
     padding: 120px;
-    color: white;
     text-align: center;
   }
 
@@ -404,20 +417,15 @@ nav ul a:hover{
     text-decoration: none;
     color: white;
   }
+
+  footer hr{
+    opacity: 60%;
+    margin: 32px 200px;
+  }
   .copyright{
     font-size: 1rem;
     opacity: 60%;
-
   }
-
-
-
-  @keyframes myAnimation {
-  0%   {background-image: linear-gradient(45deg, #F7E93F, #FB09B4, #9100F8);}
-  25%  {background-image: linear-gradient(90deg, #F7E93F, #FB09B4, #9100F8);}
-  50%  {background-image: linear-gradient(135deg, #F7E93F, #FB09B4, #9100F8);}
-  100% {background-image: linear-gradient(180deg, #F7E93F, #FB09B4, #9100F8);}
-}
 
 /* Mobile View */
 
@@ -440,7 +448,9 @@ nav ul a:hover{
   .banner, .about, .why-choose, .feature, footer{
     padding: 40px 20px;
   }
-
+  .banner{
+  background-image: url(assets/mobile-hero-bg.png);
+  }
   .banner-head{
     height: 200px;
     width: 200px;
@@ -491,7 +501,8 @@ nav ul a:hover{
   }
   .feature-container, .host-container{
     flex-direction: column;
-    gap: 16px;
+    gap: 24px;
+    column-gap: 16px;
   }
   .host-container{
     text-align: center;
@@ -502,13 +513,24 @@ nav ul a:hover{
   }
   .links{
     flex-wrap: wrap;
-    gap: 24px;
+    gap: 16px;
+    margin: 24px auto;
   }
-
+  footer hr{
+    margin: 16px 40px;
+  }
   }
   /* Tab View */
 
 @media screen and (min-width: 576px) and (max-width: 992px) {
+
+  .banner, .about, .why-choose, .feature, footer, .host{
+    padding: 60px 100px;
+  }
+
+  .about .head, .why-choose .head, .feature .title, .host-title {
+    font-size: 2.5rem;
+  }
 
   nav{
   padding: 16px 20px;
@@ -541,4 +563,19 @@ nav ul a:hover{
   .banner-body h1{
     font-size: 3rem;
   }
+
+  .items-title{
+    font-size: 1.2rem;
+  }
+
+  .host h2{
+    font-size: 1.5rem;
+  }
+  .links{
+    gap: 24px;
+  }
+  footer hr{
+    margin: 16px 100px;
+  }
+
   }
